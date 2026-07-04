@@ -23,11 +23,11 @@ except ImportError:
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 INPUT_FILE_CANDIDATES = [
-    BASE_DIR / "outputs" / "non_food_filter" / "policy_catalog_non_food_contains_jurisdiction_true_by_continent_v14.csv",
+    BASE_DIR / "outputs" / "non_food_filter" / "policy_catalog_non_food_contains_jurisdiction_true_by_continent.csv",
 ]
-OUTPUT_DIR = BASE_DIR / "outputs" / "rag_index_v1_openai"
-OUTPUT_MAIN_CATALOG = OUTPUT_DIR / "policy_catalog_main_for_rag_0512.csv"
-OUTPUT_UNCLEAR_CATALOG = OUTPUT_DIR / "policy_catalog_unclear_for_rag_0512.csv"
+OUTPUT_DIR = BASE_DIR / "outputs" / "rag_index_openai"
+OUTPUT_MAIN_CATALOG = OUTPUT_DIR / "policy_catalog_main_for_rag.csv"
+OUTPUT_UNCLEAR_CATALOG = OUTPUT_DIR / "policy_catalog_unclear_for_rag.csv"
 
 VECTOR_PATH = BASE_DIR / "vector_db"
 MAIN_COLLECTION_NAME = "policy_db_main_openai"
