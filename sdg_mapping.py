@@ -18,12 +18,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 VECTOR_PATH = BASE_DIR / "vector_db"
 COLLECTION_NAME = "policy_db_main_openai"
-INPUT_CATALOG = BASE_DIR / "outputs" / "rag_index_v1_openai" / "policy_catalog_main_for_rag_0512.csv"
+INPUT_CATALOG = BASE_DIR / "outputs" / "rag_index_openai" / "policy_catalog_main_for_rag.csv"
 
-OUTPUT_DIR = BASE_DIR / "outputs" / "sdg_mapping_v2_openai"
-OUTPUT_OBSERVATIONS = OUTPUT_DIR / "sdg_observations_0515.csv"
-OUTPUT_SUMMARY = OUTPUT_DIR / "policy_sdg_summary_0515.csv"
-OUTPUT_LOG = OUTPUT_DIR / "sdg_extract_log_0515.csv"
+OUTPUT_DIR = BASE_DIR / "outputs" / "sdg_mapping_openai"
+OUTPUT_OBSERVATIONS = OUTPUT_DIR / "sdg_observations.csv"
+OUTPUT_SUMMARY = OUTPUT_DIR / "policy_sdg_summary.csv"
+OUTPUT_LOG = OUTPUT_DIR / "sdg_extract_log.csv"
 
 DEFAULT_MODEL = "gpt-5.4-mini"
 TOP_K_CHUNKS = 12
