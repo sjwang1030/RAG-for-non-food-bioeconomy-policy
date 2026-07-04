@@ -1,7 +1,3 @@
-# sector_extract_v5_precise_sector.py
-# Purpose: retrieval-assisted multi-label sector extraction for confirmed non-food bioeconomy policies.
-# Key design: maximize real sector recall while preventing broad framework text from being over-assigned.
-
 import csv
 import json
 import os
@@ -24,13 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 VECTOR_PATH = BASE_DIR / "vector_db"
 COLLECTION_NAME = "policy_db_main_openai"
 
-INPUT_CATALOG = Path(os.getenv("SECTOR_INPUT_CATALOG", str(BASE_DIR / "outputs" / "rag_index_v1_openai" / "policy_catalog_main_for_rag_0512.csv")))
+INPUT_CATALOG = Path(os.getenv("SECTOR_INPUT_CATALOG", str(BASE_DIR / "outputs" / "rag_index_openai" / "policy_catalog_main_for_rag.csv")))
 
-OUTPUT_DIR = Path(os.getenv("SECTOR_OUTPUT_DIR", str(BASE_DIR / "outputs" / "sector_extract_v5")))
-OUTPUT_OBSERVATIONS = OUTPUT_DIR / "sector_observations_0515.csv"
-OUTPUT_SUMMARY = OUTPUT_DIR / "policy_sector_summary_0515.csv"
-OUTPUT_LOG = OUTPUT_DIR / "sector_extract_log_0515.csv"
-OUTPUT_REJECTED = OUTPUT_DIR / "sector_rejected_observations_0515.csv"
+OUTPUT_DIR = Path(os.getenv("SECTOR_OUTPUT_DIR", str(BASE_DIR / "outputs" / "sector_extract")))
+OUTPUT_OBSERVATIONS = OUTPUT_DIR / "sector_observations.csv"
+OUTPUT_SUMMARY = OUTPUT_DIR / "policy_sector_summary.csv"
+OUTPUT_LOG = OUTPUT_DIR / "sector_extract_log.csv"
+OUTPUT_REJECTED = OUTPUT_DIR / "sector_rejected_observations.csv"
 
 DEFAULT_MODEL = "gpt-5.4-mini"
 
